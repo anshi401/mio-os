@@ -17,7 +17,7 @@
 - theme: `adw-gtk-theme`, `papirus`, `bibata` cursor
 - font: `CodeNewRoman Nerd Font`
 
-> ~54 packages in total, see [pkgList](...) and [aurPkgList](...)
+> ~54 packages in total, see [pkgList](packages/pkgList) and [aurPkgList](packages/aurPkgList)
 
 ## gallery
 
