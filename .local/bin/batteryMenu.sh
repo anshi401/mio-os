@@ -20,5 +20,5 @@ esac
 if SUDO_ASKPASS="$askpass" sudo -A bash -c "echo $threshold > $path"; then
     notify-send -i "dialog-information-symbolic" "Battery management" "Charging threshold set to $threshold%" -h string:x-canonical-private-synchronous:battery_management -t 2000
 else
-    notify-send -i -u critical "dialog-error-symbolic" "Battery management" "Failed to update charging threshold" -h string:x-canonical-private-synchronous:battery_management
+    notify-send -u critical -i "dialog-error-symbolic" "Battery management" "Failed to update charging threshold" -h string:x-canonical-private-synchronous:battery_management
 fi

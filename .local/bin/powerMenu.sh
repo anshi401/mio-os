@@ -5,7 +5,7 @@ choice=$(printf "\n󰤄\n󰩈\n\n" | rofi -dmenu -config ~/.mio-os/.con
 case "$choice" in
     "") hyprlock ;;
     "󰤄") systemctl suspend;;
-    "󰩈") pkill -KILL -u "$USER" ;;
+    "󰩈") hyprctl dispatch exit;;
     "") systemctl reboot ;;
     "") systemctl poweroff ;;
 esac

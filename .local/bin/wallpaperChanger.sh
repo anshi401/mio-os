@@ -49,7 +49,7 @@ selected_wall=$(
             echo -en "$name\0icon\x1f$img\n"
         done
     ) | rofi -dmenu -show-icons -p "Wallpaper" -config "$wallpaperRofiConfig"
-)
+) || exit 0
 
 if [ -z "$selected_wall" ]; then
     echo "No wallpaper selected." >&2
@@ -76,7 +76,7 @@ declare -A scheme_map=(
     ["Vibrant"]="scheme-vibrant"
 )
 
-choice=$(printf '%s\n' "${!scheme_map[@]}" | sort | rofi -dmenu -p " Select color scheme" -config "$schemeRofiConfig")
+choice=$(printf '%s\n' "${!scheme_map[@]}" | sort | rofi -dmenu -p " Select color scheme" -config "$schemeRofiConfig") || exit 0
 
 if [ -z "$choice" ]; then
     echo "No color scheme selected." >&2

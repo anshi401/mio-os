@@ -54,3 +54,8 @@
 
 - [install](docs/install.md)
 - [keybinds](docs/keybinds.md)
+
+## license
+
+MIT, see [LICENSE](LICENSE). 
+Wallpapers belong to their respective authors.
