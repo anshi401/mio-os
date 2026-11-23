@@ -8,7 +8,7 @@ target_config="$waybar_dir/config.jsonc"
 rofi_config="$HOME/.mio-os/.config/rofi/styles/waybarLayoutChanger.rasi"
 state_file="$waybar_dir/current_template"
 
-options="Default\nFlat\nFloating"
+options="default\nflat\nfloating"
 
 selected=$(echo -e "$options" | rofi -dmenu -config "$rofi_config")
 
@@ -17,15 +17,15 @@ if [ -z "$selected" ]; then
 fi
 
 case "$selected" in
-    "Default")
+    "default")
         style_file="default.css"
         config_template="default.jsonc"
         ;;
-    "Flat")
+    "flat")
         style_file="flat.css"
         config_template="default.jsonc"
         ;;
-    "Floating")
+    "floating")
         style_file="floating.css"
         config_template="default.jsonc"
         ;;
