@@ -1,0 +1,16 @@
+{
+  "custom/notifications": {
+    "exec": "notificationsIcon.sh",
+    "return-type": "json",
+    "interval": 1,
+    "signal": 9,
+    "format": "{icon}",
+    "format-icons": {
+      "empty": "󰂜",
+      "has": "󱅫",
+      "dnd": "󰂛"
+    },
+    "tooltip": true,
+    "on-click": "notificationsHistory.sh; pkill -RTMIN+9 waybar"
+  }
+}

@@ -1,0 +1,32 @@
+@theme "theme.rasi"
+
+window {
+    margin: 6px 0 6px 6px;
+    location: east;
+    anchor: east;
+    width: 8%;
+    border-radius: 8px 0 0 8px;
+    border: 2px 0 2px 2px;
+}
+
+mainbox {
+    children: [ listview ];
+}
+
+listview {
+    lines: 3;
+    columns: 1;
+    scrollbar: false;
+    padding: 0;
+}
+
+element {
+    orientation: vertical;
+    children: [ element-text ];
+}
+
+element-text {
+    font: "CodeNewRoman Nerd Font Propo 24";
+    horizontal-align: 0.5;
+    padding: 16px 16px;
+}

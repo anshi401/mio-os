@@ -1,0 +1,33 @@
+{
+  "clock#time": {
+    "interval": 1,
+    "format": "{:%H:%M:%S}",
+    "tooltip": false
+  },
+
+  "clock#date": {
+    "interval": 60,
+    "format": "{:%a, %d}",
+    "format-alt": "{:%A, %d %B %Y}",
+    "tooltip-format": "<span size='10pt' font='CodeNewRoman Nerd Font Propo'>{calendar}</span>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 4,
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "{}",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      },
+      "first-day-of-week": 1
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_down",
+      "on-scroll-down": "shift_up"
+    }
+  }
+}

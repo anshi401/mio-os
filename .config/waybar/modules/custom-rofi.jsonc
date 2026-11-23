@@ -1,0 +1,7 @@
+{
+  "custom/rofi": {
+    "format": "mio  os",
+    "on-click": "rofi -show drun -config ~/.mio-os/.config/rofi/styles/appLauncher.rasi",
+    "tooltip": false
+  }
+}

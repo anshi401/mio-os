@@ -1,0 +1,11 @@
+{
+  "custom/update": {
+    "format": "󰏗 {text}",
+    "interval": 86400, // once every day
+    "exec": "checkUpdates.sh",
+    "on-click": "kitty --class systemUpdate systemUpdate.sh",
+    "signal": 8,
+    "tooltip": true,
+    "return-type": "json"
+  }
+}

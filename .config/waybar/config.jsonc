@@ -1,0 +1,109 @@
+[
+  {
+    "output": "HDMI-A-1",
+    "layer": "top",
+    "position": "top",
+
+    "modules-left": [
+      "custom/rofi",
+      "hyprland/workspaces"
+    ],
+
+    "modules-center": [
+      "group/datetime"
+    ],
+
+    "modules-right": [
+      "group/settings",
+      "tray",
+      "hyprland/language",
+      "network",
+      "battery",
+      "custom/recorder",
+      "custom/powermenu"
+    ],
+
+    "group/settings": {
+      "orientation": "horizontal",
+      "drawer": {
+          "transition-duration": 240,
+          "click-to-reveal": true
+      },
+      "modules": [
+        "custom/settings-wrap",
+        "custom/update",
+        "power-profiles-daemon",
+        // "backlight",
+        "pulseaudio#microphone",
+        "pulseaudio",
+        "bluetooth"
+      ]
+    },
+
+    "group/hardware": {
+      "orientation": "horizontal",
+      "drawer": {
+        "transition-duration": 240,
+        "transition-left-to-right": false,
+        "click-to-reveal": true
+      },
+      "modules": [
+        "custom/hardware-wrap",
+        "temperature",
+        "memory",
+        "cpu",
+        "disk"
+      ]
+    },
+
+    "group/datetime": {
+      "orientation": "horizontal",
+      "modules": [
+        "idle_inhibitor",
+        "clock#date",
+        "clock#time",
+        "custom/notifications"
+      ]
+    },
+
+    "include": [
+      "~/.mio-os/.config/waybar/modules/*json*"
+    ]
+  },
+
+  {
+    "output": "DP-1",
+    "layer": "top",
+    "position": "top",
+
+    "modules-left": [
+      "custom/rofi",
+      "hyprland/workspaces"
+    ],
+
+    "modules-center": [
+      "group/datetime"
+    ],
+
+    "modules-right": [
+      "hyprland/language",
+      "network",
+      "custom/recorder",
+      "custom/powermenu"
+    ],
+
+    "group/datetime": {
+      "orientation": "horizontal",
+      "modules": [
+        "idle_inhibitor",
+        "clock#date",
+        "clock#time",
+        "custom/notifications"
+      ]
+    },
+
+    "include": [
+      "~/.mio-os/.config/waybar/modules/*json*"
+    ]
+  }
+]

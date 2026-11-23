@@ -1,0 +1,19 @@
+hl.config({
+    input = {
+        kb_layout = "us,ru",
+        kb_options = "grp:win_space_toggle",
+
+        follow_mouse = 1,
+        sensitivity = 0,
+
+        touchpad = {
+            disable_while_typing = true,
+            natural_scroll = true,
+            scroll_factor = 0.6,
+        }
+    },
+
+    cursor = {
+        no_hardware_cursors = true
+    }
+})

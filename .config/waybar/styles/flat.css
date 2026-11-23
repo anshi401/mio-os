@@ -1,0 +1,251 @@
+@import "colors.css";
+
+@keyframes blink-critical {
+    from {
+        background-color: alpha(@background, 0.8);
+        color: @on_background;
+    }
+    to {
+        background-color: @error;
+        color: @on_error;
+    }
+}
+
+@keyframes blink-urgent {
+    from {
+        background-color: @inverse_surface;
+        color: @inverse_on_surface;
+    }
+    to {
+        background-color: @error;
+        color: @on_error;
+    }
+}
+
+@keyframes blink-recording {
+    from {
+        color: @on_background;
+    }
+    to {
+        color: @error;
+    }
+}
+
+* {
+    font-family: "CodeNewRoman Nerd Font Propo";
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#waybar {
+    background-color: alpha(@background, 0.8);
+    color: @on_background;
+    border-radius: unset;
+    padding: 3px 0;
+}
+
+tooltip {
+    background-color: alpha(@background, 0.8);
+    color: @on_background;
+    border-radius: 8px;
+    border: 2px solid @outline_variant;
+    box-shadow: 0 0 2px @shadow;
+}
+
+.modules-left,
+.modules-right,
+.modules-center {
+    background-color: transparent;
+    margin: 1px 4px;
+}
+
+#language,
+#cpu,
+#memory,
+#disk,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#backlight,
+#temperature,
+#tray,
+#privacy,
+#mpd,
+#power-profiles-daemon,
+#custom-powermenu,
+#custom-update,
+#custom-settings-wrap,
+#custom-hardware-wrap,
+#custom-rofi,
+#custom-recorder {
+    padding: 0 6px;
+    margin: 2px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+}
+
+#custom-rofi {
+    background-color: @tertiary;
+    color: @on_tertiary;
+}
+
+#battery,
+#cpu,
+#memory {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.critical.discharging {
+    animation-name: blink-critical;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+#cpu.critical,
+#memory.critical {
+    animation-name: blink-critical;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+#mpd:hover,
+#language:hover,
+#battery:hover,
+#pulseaudio:hover,
+#network:hover,
+#bluetooth:hover,
+#idle_inhibitor:hover,
+#power-profiles-daemon:hover,
+/* Waybar 0.16 puts the #custom-* name on the label but sets the hover state on
+   the wrapper box, so #custom-*:hover no longer matches. Remove this workaround
+   once https://github.com/Alexays/Waybar/pull/5473 is released. */
+box:hover > #custom-update,
+box:hover > #custom-settings-wrap,
+box:hover > #custom-hardware-wrap,
+box:hover > #custom-powermenu,
+box:hover > #custom-rofi,
+box:hover > #custom-notifications,
+box:hover > #custom-recorder{
+    animation-name: none;
+    background-color: @primary;
+    color: @on_primary;
+}
+
+#custom-recorder.recording {
+    animation-name: blink-recording;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#datetime {
+    margin: 2px;
+    border-radius: 6px;
+}
+
+#datetime #clock,
+#idle_inhibitor,
+#custom-notifications {
+    margin: 0;
+    padding: 0 8px;
+    border-radius: 0;
+}
+
+#datetime #clock.date {
+    background-color: @secondary;
+    color: @on_secondary;
+}
+
+#idle_inhibitor {
+    background-color: @secondary;
+    color: @on_secondary;
+    border-radius: 6px 0 0 6px;
+}
+
+#datetime #clock.time {
+    background-color: alpha(@background, 0.8);
+    color: @on_background;
+}
+
+#custom-notifications {
+    background-color: alpha(@background, 0.8);
+    color: @on_background;
+    border-radius: 0 6px 6px 0;
+}
+
+#datetime #clock.date:hover {
+    background-color: @primary;
+    color: @on_primary;
+}
+
+#workspaces {
+    min-height: 32px;
+}
+
+#workspaces button:not(.taskbar-window) {
+    min-width: 18px;
+    padding: 0px 8px;
+    margin: 2px 2px;
+    border: none;
+    border-radius: 4px;
+    color: transparent;
+    background: @secondary;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#workspaces button.empty:not(.taskbar-window) {
+    background: @background;
+}
+
+#workspaces button.active:not(.taskbar-window) {
+    background: @primary;
+    color: @on_primary;
+}
+
+#workspaces button:not(.taskbar-window):hover,
+#workspaces button.empty:not(.taskbar-window):hover,
+#workspaces button.active:not(.taskbar-window):hover {
+    background: @primary;
+    color: @on_primary;
+}
+
+#workspaces button.urgent:not(.taskbar-window) {
+    background: @inverse_surface;
+    color: @inverse_on_surface;
+    animation-name: blink-urgent;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#workspaces button.taskbar-window,
+#workspaces button.taskbar-window.active {
+    min-height: 14px;
+    min-width: 12px;
+    padding: 2px;
+    margin: 4px 2px;
+    border: none;
+    border-radius: 4px;
+    color: transparent;
+    background: transparent;
+    transition: background-color 0.2s ease;
+}
+
+#workspaces button.taskbar-window:hover {
+    background-color: @primary;
+}
+
+#workspaces button image {
+    margin: 0;
+    padding: 0;
+    min-height: 12px;
+    min-width: 12px;
+}

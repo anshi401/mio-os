@@ -1,0 +1,24 @@
+@theme "theme.rasi"
+
+configuration {
+    modes: [ drun,window ];
+    window-format: " {c}";
+}
+
+window {
+    width: 20%;
+    height: 72%;
+    margin: 6px 6px 6px 0;
+    location: west;
+    anchor: west;
+    border-radius: 0 8px 8px 0;
+    border: 2px 2px 2px 0;
+}
+
+mainbox {
+    children: [ "inputbar", "listview", "mode-switcher" ];
+}
+
+listview {
+    columns: 1;
+}

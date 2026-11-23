@@ -1,0 +1,21 @@
+@theme "theme.rasi"
+
+window {
+    width: 32%;
+    margin: 6px;
+    location: north;
+    anchor: north;
+    border-radius: 8px;
+}
+textbox-prompt-colon {
+    str: "";
+}
+
+element {
+    children: [ element-text ];
+}
+
+listview {
+    lines: 5;
+    columns: 1;
+}

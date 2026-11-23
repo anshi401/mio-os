@@ -1,0 +1,197 @@
+// credits: https://github.com/dylanaraps
+
+@import "colors.rasi"
+
+configuration {
+    font: "CodeNewRoman Nerd Font Propo 12";
+    display-drun: "";
+    display-window: "󱂬";
+    display-emoji: "󰞅";
+    display-clipboard: "󰅇";
+    icon-theme: "Papirus-Dark";
+    show-icons: true;
+}
+
+* {
+    active-background: @secondary;
+    active-foreground: @on-secondary;
+    normal-background: @background;
+    normal-foreground: @foreground;
+    urgent-background: @inverse-surface;
+    urgent-foreground: @inverse-on-surface;
+
+    alternate-active-background: @background;
+    alternate-active-foreground: @foreground;
+    alternate-normal-background: @background;
+    alternate-normal-foreground: @foreground;
+    alternate-urgent-background: @inverse-surface;
+    alternate-urgent-foreground: @inverse-on-surface;
+
+    selected-active-background: @primary;
+    selected-active-foreground: @on-primary;
+    selected-normal-background: @primary;
+    selected-normal-foreground: @on-primary;
+    selected-urgent-background: @primary;
+    selected-urgent-foreground: @on-primary;
+
+    background-color: transparent;
+    foreground: @on-background;
+    border-color: @outline-variant;
+    spacing: 2;
+}
+
+window {
+    background-color: @background;
+    border: 2;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+mainbox {
+    border: 0;
+    padding: 0;
+    spacing: 2px;
+}
+
+message {
+    border: 0px;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: @normal-background;
+}
+
+textbox {
+    background-color: transparent;
+    text-color: @normal-foreground;
+}
+
+inputbar {
+    background-color: @background;
+    border-radius: 4px;
+    children: [ textbox-prompt-colon, entry ];
+}
+
+entry {
+    placeholder: "Search...";
+    padding: 12px 0px 12px;
+    text-color: @normal-foreground;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: "";
+    padding: 12px;
+    text-color: @normal-foreground;
+}
+
+listview {
+    fixed-height: 0;
+    border: 0;
+    border-color: @border-color;
+    spacing: 2px;
+    scrollbar: false;
+}
+
+element {
+    border: 0;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+element-text, element-icon {
+    background-color: transparent;
+    text-color: inherit;
+}
+
+element-icon {
+    padding: 0 4px 0 0;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
+
+element.normal.normal {
+    background-color: @normal-background;
+    text-color: @normal-foreground;
+}
+
+element.normal.urgent {
+    background-color: @urgent-background;
+    text-color: @urgent-foreground;
+}
+
+element.normal.active {
+    background-color: @active-background;
+    text-color: @active-foreground;
+}
+
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}
+
+element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color: @selected-urgent-foreground;
+}
+
+element.selected.active {
+    background-color: @selected-active-background;
+    text-color: @selected-active-foreground;
+}
+
+element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color: @alternate-normal-foreground;
+}
+
+element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color: @alternate-urgent-foreground;
+}
+
+element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color: @alternate-active-foreground;
+}
+
+scrollbar {
+    width: 4px;
+    border: 0;
+    handle-width: 8px;
+    handle-color: @selected-normal-background;
+    padding: 0;
+}
+
+sidebar {
+    border: 1px;
+    border-color: @border-color;
+}
+
+button {
+    border-radius: 4px;
+    padding: 8px;
+    text-color: @normal-foreground;
+    background-color: @normal-background;
+}
+
+button.selected {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}
+
+case-indicator {
+    spacing: 0;
+    text-color: @normal-foreground;
+}
+
+entry {
+    spacing: 0;
+    text-color: @normal-foreground;
+}
+
+prompt {
+    spacing: 0;
+    text-color: @normal-foreground;
+}

@@ -1,0 +1,82 @@
+{
+  "buffer_font_family": "CodeNewRoman Nerd Font Mono",
+  "ui_font_size": 16,
+  "buffer_font_size": 18,
+
+  "terminal": {
+    "font_family": "CodeNewRoman Nerd Font Mono",
+    "font_size": 18
+  },
+
+  "theme": {
+    "mode": "system",
+    "light": "Ayu Light",
+    "dark": "Ayu Dark",
+  },
+
+  "icon_theme": {
+    "mode": "system",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
+
+  "collaboration_panel": {
+    "button": false
+  },
+
+  "title_bar": {
+    "show_sign_in": false
+  },
+
+  "base_keymap": "VSCode",
+  "code_lens": "on",
+  "disable_ai": true,
+  "cli_default_open_behavior": "existing_window",
+  "restore_on_startup": "launchpad",
+
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+
+  "auto_install_extensions": {
+    "dockerfile": true,
+    "docker-compose": true,
+    "lua": true,
+    "html": true,
+    "emmet": true,
+    "toml": true,
+    "fish": true,
+    "ini": true,
+    "xml": true,
+    "git-firefly": true
+  },
+
+  "languages": {
+    "Python": {
+      "language_servers": [
+        "basedpyright",
+        "ruff",
+        "!pyright",
+        "!ty",
+        "!pylsp",
+        "..."
+      ],
+      "format_on_save": "on",
+      "formatter": {
+        "language_server": { "name": "ruff" }
+      },
+      "code_actions_on_format": {
+        "source.organizeImports.ruff": true,
+        "source.fixAll.ruff": true
+      }
+    }
+  },
+
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+    "anthropic_retention": false
+  },
+}

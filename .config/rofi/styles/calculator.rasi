@@ -1,0 +1,27 @@
+@theme "theme.rasi"
+
+window {
+    width: 32%;
+    margin: 6px 6px 0 6px;
+    location: south;
+    anchor: south;
+    border-radius: 8px 8px 0 0;
+    border: 2px 2px 0 2px;
+}
+
+entry {
+    placeholder: "Solve...";
+}
+
+textbox-prompt-colon {
+    str: "";
+}
+
+listview {
+    lines: 4;
+    columns: 1;
+}
+
+element {
+    children: [ element-text ];
+}

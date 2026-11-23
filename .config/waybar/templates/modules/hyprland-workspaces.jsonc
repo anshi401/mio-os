@@ -1,0 +1,20 @@
+{
+  "hyprland/workspaces": {
+    "all-outputs": false,
+    "disable-scroll": true,
+    "format": "{windows}",
+    "persistent-workspaces": {
+      "$settingsMainMonitor": [1, 2, 3, 4, 5],
+      "$settingsSecondMonitor": [6, 7, 8, 9, 10]
+    },
+    "tooltip": false,
+    "workspace-taskbar": {
+      "enable": true,
+      "update-active-window": false,
+      "format": "{icon}",
+      "icon-size": 12,
+      "orientation": "horizontal",
+      "on-click-window": "hyprctl dispatch 'hl.dsp.focus({ window = \"address:{address}\" })'"
+    }
+  }
+}
