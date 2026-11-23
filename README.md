@@ -39,9 +39,9 @@
 
 <table>
   <tr>
-    <td><img src="assets/screenshots/waybarDefault.png"></td>
-    <td><img src="assets/screenshots/waybarFlat.png"></td>
-    <td><img src="assets/screenshots/waybarFloating.png"></td> 
+    <td width="33%"><img src="assets/screenshots/waybarDefault.png" width="100%"></td>
+    <td width="33%"><img src="assets/screenshots/waybarFlat.png" width="100%"></td>
+    <td width="33%"><img src="assets/screenshots/waybarFloating.png" width="100%"></td>
   </tr>
   <tr>
     <td align="center">default</td>
